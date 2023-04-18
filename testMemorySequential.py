@@ -1,4 +1,5 @@
-import memory_system
+
+from DRAMsimWrapper.memory_system import * 
 import ctypes
 import numpy as np
 
@@ -9,7 +10,7 @@ def callback_read(i):
 def callback_write(i):
     pass
 
-memsys = memory_system.MemorySystem(u'./DDR3_1Gb_x8_1333.ini',u'./',callback_read,callback_write)
+memsys = MemorySystem(u'./MemoryConfigs/DDR3_1Gb_x8_1333.ini',u'./runs',callback_read,callback_write)
 
 base_addr = 0
 
@@ -19,7 +20,6 @@ curr_addr = base_addr
 
 cycles = 0
 
-mem = np.zeros(LEN_OF_MEMORY)
 
 while curr_addr != 6400:
     memsys.ClockTick()
