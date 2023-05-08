@@ -19,6 +19,6 @@ You can also borrow more Memory Configs from DRAMSim3 and add them to the Memory
 The version of DRAMsim3 used to compile this code is included in this Github Repository. 
 
 ```
-make clean
+  make clean
 ```
 will remove any of the built files in DRAMsimWrapper
